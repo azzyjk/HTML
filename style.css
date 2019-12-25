@@ -1,0 +1,15 @@
+h1 {
+	border-bottom:5px gray solid;
+	text-align: center;
+	margin:0;
+}
+
+#grid {
+	display:grid;
+	grid-template-columns:150px 1fr;
+}
+
+#grid ol{
+	border-right:5px gray solid;
+	margin:0;
+}
