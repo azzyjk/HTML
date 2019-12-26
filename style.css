@@ -23,4 +23,9 @@ h1 {
 	}
 }
 
-
+.btn{
+	margin:auto;
+	display:block;
+	padding:30px 100px;
+	font-size:25px;
+}
