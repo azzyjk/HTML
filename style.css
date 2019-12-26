@@ -24,8 +24,8 @@ h1 {
 }
 
 .btn{
-	margin:auto;
-	display:block;
+	margin:20;
+	display:inline;
 	padding:30px 100px;
 	font-size:25px;
 }

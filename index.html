@@ -29,7 +29,15 @@ for documents designed to be displayed in a web browser. It can be assisted by t
 			</div>
 		</div>
 		<input class="btn" type="button" value="night" onclick="
-		
+			document.querySelector('body').style.backgroundColor='black';
+			document.querySelector('body').style.color='white';
+		">
+		<input class="btn" type="button" value="day" onclick="
+			document.querySelector('body').style.backgroundColor='white';
+			document.querySelector('body').style.color='black';
+		">
+		<input class="btn" type="button" value="alert" onclick="
+			alert('a');
 		">
 	</body>
 </html>
