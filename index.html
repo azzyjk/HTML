@@ -3,6 +3,20 @@
 		<title>WEB - HTML</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
+		<script>
+			function changecolor(self){
+				if(self.value=='night'){
+					document.querySelector('body').style.backgroundColor='black';
+					document.querySelector('body').style.color='white';
+					self.value='day';
+				}
+				else {
+					document.querySelector('body').style.backgroundColor='white';
+					document.querySelector('body').style.color='black';
+					self.value='night';
+				}
+			}
+		</script>
 	</head>
 	
 	<body>
@@ -29,13 +43,9 @@ for documents designed to be displayed in a web browser. It can be assisted by t
 			</div>
 		</div>
 		<input class="btn" type="button" value="night" onclick="
-			document.querySelector('body').style.backgroundColor='black';
-			document.querySelector('body').style.color='white';
+			changecolor(this);
 		">
-		<input class="btn" type="button" value="day" onclick="
-			document.querySelector('body').style.backgroundColor='white';
-			document.querySelector('body').style.color='black';
-		">
+		
 		<input class="btn" type="button" value="alert" onclick="
 			alert('a');
 		">
