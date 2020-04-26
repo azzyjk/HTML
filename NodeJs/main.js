@@ -11,9 +11,7 @@ var app = http.createServer(function(request,response){
       title = 'Welcome';
     }
     if(_url == '/favicon.ico'){
-        response.writeHead(404);
-        response.end();
-        return;
+        return response.writeHead(404);
     }
     response.writeHead(200);
     fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
@@ -29,7 +27,7 @@ var app = http.createServer(function(request,response){
   <ol>
     <li><a href="/?id=HTML">HTML</a></li>
     <li><a href="/?id=CSS">CSS</a></li>
-    <li><a href="/?id=JS">JavaScript</a></li>
+    <li><a href="/?id=JavaScript">JavaScript</a></li>
   </ol>
   <h2>${title}</h2>
   <p><${description}</p>
