@@ -130,3 +130,55 @@ img 태그는 이미지를 html문서내에 삽입시켜주는 태그이다.
 <img src="https://image.shutterstock.com/image-photo/mountain-peak-everest-highest-world-600w-598924397.jpg">
 
 ---
+
+# JavaScript
+
+### **let**, **var**의 차이
+let과 var는  JavaScript에서 변수를 선언해주는 키워드이다.
+하지만 둘에게는 2가지의 차이점이 있다.  
+1. Hoisting
+2. 재선언 가능 여부
+
+#### Hoisting
+Hoist이란 '끌어올리다'라는 사전적 의미를 가지고 있는데 자바스크립트에서는 변수가 선언(Declartion)부분과 할당(Assignment)부분으로 나뉘어 선언부분이 함수의 최상위로 가는것을 말한다.  
+
+```JavaScript
+function test(){
+    console.log(temp); //undefined
+    var temp=40;
+    console.log(temp); //40
+}
+```  
+이 코드를 실행했을때 특이한 점이 있는데 처음 console.log(temp)로 출력한 값이 'Reference error : temp is not defined'가 아니라 undefined라고 뜨는 것이다.  
+이는 변수가 hoisting되어 아래와 같은 코드처럼 실행되었다는 것을 의미한다.
+
+```JavaScript
+function test(){
+    var temp;
+    console.log(temp); //undefined
+    temp=40;
+    console.log(temp); //40
+}
+```
+
+이제 let과 var에서의 차이를 보면  
+```JavaScript
+test=40;
+var = test; //에러 X
+
+temp=30;
+let temp; //Refrence error : temp is not defined
+```
+코드를 실행했을때 이와 같이 let은 참조에러가 뜨고 var는 실행이 되는것을 알 수 있다.  
+
+#### 2. 재선언 가능 여부
+var와 let의 차이점 2번째로는 변수를 이미 선언한 변수를 재선언 할 수 있냐 없냐이다.
+```JavaScript
+var test=10;
+var test=100;
+
+let temp=20;
+let temp=30; //Uncaught SyntaxError: Identifier 'temp' has already been declared
+```
+
+---
