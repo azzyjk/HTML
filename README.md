@@ -182,3 +182,16 @@ let temp=30; //Uncaught SyntaxError: Identifier 'temp' has already been declared
 ```
 
 ---
+
+### ***const***
+const는 let, var처럼 변수를 선언할때 사용하는 키워드이다.
+```JavaScript
+const temp=10;
+const temp=20; // Uncaught SyntaxError: Identifier 'temp' has already been declared
+const test; //Missing initializer in const declaration
+temp = 30; //Uncaught TypeError:Assignment to constant variable.
+```
+
+나머지 특징은 let과 비슷하지만 추가적인 특징으로 변수의 값을 변경할 수 없다는 특징을 가지고 있다.  
+
+---
