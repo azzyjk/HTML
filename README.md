@@ -111,7 +111,7 @@ ul 태그는 리스트를 나타내는 태그로써 뒤에 입력되는 리스�
 a 태그는 속성을 이용하여 문서내의 특정 구간이나 다른 웹사이트로 이동하거나 파일, 이메일로 연결할 수 있도록 만들 수 있다.
 ```html
 <p> <a href="https://www.naver.com"> naver </a> </p>
-<p> <a href="mailto:azzyjk@naver.com"> azzyjk에게 메일보내기 </a> </p>
+<p> <a href="mailto:example@example.com"> example에게 메일보내기 </a> </p>
 <p> <a href="tel:+0123456789"> 전화걸기 </a> </p>
 <p> <a href="#"> 문서의 젤 위로 이동 </a> </p>
 ```
