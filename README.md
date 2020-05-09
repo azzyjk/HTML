@@ -217,3 +217,12 @@ const test = {
 test('hello')
 test.plus(3,5)
 ```
+---
+documnet 객체에있는 querySelector라는 단어를 사용해 특정 태그, 클래스, 아이디를 선택할 수 있다.
+```JavaScript
+document.querySelector('body')//body 태그 선택
+document.querySelector('.styles')//styles 클래스 선택
+document.querySelector('#test')//test id 선택
+```
+
+---
