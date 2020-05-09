@@ -150,7 +150,6 @@ function test(){
 }
 ```  
 이 코드를 실행했을때 특이한 점이 있는데 처음 console.log(temp)로 출력한 값이 'Reference error : temp is not defined'가 아니라 undefined라고 뜨는 것이다.  
-이는 변수가 hoisting되어 아래와 같은 코드처럼 실행되었다는 것을 의미한다.
 
 ```JavaScript
 function test(){
@@ -195,3 +194,26 @@ temp = 30; //Uncaught TypeError:Assignment to constant variable.
 나머지 특징은 let과 비슷하지만 추가적인 특징으로 변수의 값을 변경할 수 없다는 특징을 가지고 있다.  
 
 ---
+
+### 함수(Function)  
+JavaScript에서 함수는 아래와 같은 형식으로 작성한다.
+```JavaScript
+function test(parameter){
+    return parameter
+}
+```
+
+또한 객체화 시키고 함수를 만들려면 아래와 같이 사용하면 된다.
+```JavaScript
+const test = {
+    plus: function (a, b){
+        return a+b
+    }
+}
+```
+
+함수를 사용할때는 아래와 같이 사용하면 된다.
+```JavaScript
+test('hello')
+test.plus(3,5)
+```
