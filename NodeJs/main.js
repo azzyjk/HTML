@@ -36,11 +36,11 @@ var app = http.createServer(function (request, response) {
           var html = template.html(
             title,
             list,
-            `<h2>${title}</h2>${description}`,
+            `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
             `<a href="./create">create</a> 
-             <a href="./update?id=${title}">update</a>
+             <a href="./update?id=${sanitizedTitle}">update</a>
              <form action="delete_process" method="post">
-              <input type="hidden" name="id" value="${title}">
+              <input type="hidden" name="id" value="${sanitizedTitle}">
               <input type="submit" value="delete">
              </form>`,
           );
